@@ -1,11 +1,9 @@
 import React from 'react';
 
+import { Home } from './components/pages';
+
 function App() {
-  return (
-    <div className="App">
-      <h1>App is running</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
