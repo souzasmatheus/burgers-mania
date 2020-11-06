@@ -37,12 +37,14 @@ import {
   StyledDialogActions,
 } from './styled';
 
-const ProductCard = ({ style, source, price, name, description }) => {
-  const extras = useStore((state) => state.extras);
+const ProductCard = ({ style, source, price, name, description, id }) => {
+  const [extras, addToCart] = useStore((state) => [
+    state.extras,
+    state.addToCart,
+  ]);
   const [modalVisible, setModalVisible] = useState(false);
   const [additionalsVisible, setAdditionalsVisible] = useState(false);
   const [product, setProduct] = useState({
-    id: null,
     amount: 1,
     extras: [],
   });
@@ -55,7 +57,7 @@ const ProductCard = ({ style, source, price, name, description }) => {
     }, 0);
     const sum = (extrasTotal + parseFloat(price)) * product.amount;
     setTotal(sum.toFixed(2));
-  }, [product]);
+  }, [product, extras, price]);
 
   const handleExtraClick = (extraId) => {
     const extraAlreadySelected = product.extras.includes(extraId);
@@ -81,6 +83,23 @@ const ProductCard = ({ style, source, price, name, description }) => {
     }));
   };
 
+  const handleAddToCart = () => {
+    addToCart({
+      ...product,
+      id,
+      total,
+    });
+    resetState();
+  };
+
+  const resetState = () => {
+    setProduct({
+      amount: 1,
+      extras: [],
+    });
+    setTotal(price);
+  };
+
   return (
     <>
       <Container {...{ style }}>
@@ -96,6 +115,7 @@ const ProductCard = ({ style, source, price, name, description }) => {
         </ActionArea>
       </Container>
       <Dialog
+        fullWidth
         onClose={() => setModalVisible(false)}
         open={modalVisible}
         aria-labelledby="alert-dialog-title"
@@ -126,7 +146,7 @@ const ProductCard = ({ style, source, price, name, description }) => {
             <Collapse in={additionalsVisible} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 {extras.map((extra, index) => (
-                  <ListItem button key={`extra-${index}`}>
+                  <ListItem key={`extra-${index}`}>
                     <ListItemText
                       primary={extra.title}
                       secondary={extra.price}
@@ -157,7 +177,9 @@ const ProductCard = ({ style, source, price, name, description }) => {
         </StyledDialogContent>
         <StyledDialogActions>
           <DisabledButton disabled>Total: R${total}</DisabledButton>
-          <Button color="primary">Adicionar</Button>
+          <Button color="primary" onClick={handleAddToCart}>
+            Adicionar
+          </Button>
         </StyledDialogActions>
       </Dialog>
     </>

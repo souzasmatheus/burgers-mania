@@ -31,11 +31,11 @@ export default () => {
         );
         return (
           <HorizontalScroller
+            key={`horizontal-scroll-${category}`}
             title={capitalize(category)}
             data={currentCategoryProducts}
             renderItem={(item, index) => (
               <ProductCard
-                key={`product-${item.key}`}
                 id={item.id}
                 name={item.title}
                 price={item.price}
@@ -50,7 +50,7 @@ export default () => {
                 }
               />
             )}
-            keyExtractor={(item) => `${category}-${item.key}`}
+            keyExtractor={(item) => `${category}-${item.id}`}
             style={styles.horizontalScroller}
           />
         );
