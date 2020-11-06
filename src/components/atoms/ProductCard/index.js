@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MoreHoriz from '@material-ui/icons/MoreHoriz';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -46,6 +46,16 @@ const ProductCard = ({ style, source, price, name, description }) => {
     amount: 1,
     extras: [],
   });
+  const [total, setTotal] = useState(price);
+
+  useEffect(() => {
+    const extrasTotal = product.extras.reduce((accumulator, currentValue) => {
+      const { price } = extras.find((extra) => extra.id === currentValue);
+      return accumulator + parseFloat(price);
+    }, 0);
+    const sum = (extrasTotal + parseFloat(price)) * product.amount;
+    setTotal(sum.toFixed(2));
+  }, [product]);
 
   const handleExtraClick = (extraId) => {
     const extraAlreadySelected = product.extras.includes(extraId);
@@ -80,7 +90,7 @@ const ProductCard = ({ style, source, price, name, description }) => {
             <Title>{name}</Title>
           </Content>
           <Bottom>
-            <Price>{price}</Price>
+            <Price>R${price}</Price>
             <MoreHoriz />
           </Bottom>
         </ActionArea>
@@ -146,7 +156,7 @@ const ProductCard = ({ style, source, price, name, description }) => {
           </ButtonGroup>
         </StyledDialogContent>
         <StyledDialogActions>
-          <DisabledButton disabled>Total: R$14.90</DisabledButton>
+          <DisabledButton disabled>Total: R${total}</DisabledButton>
           <Button color="primary">Adicionar</Button>
         </StyledDialogActions>
       </Dialog>
