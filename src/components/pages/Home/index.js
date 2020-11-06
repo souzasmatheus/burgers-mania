@@ -36,6 +36,7 @@ export default () => {
             renderItem={(item, index) => (
               <ProductCard
                 key={`product-${item.key}`}
+                id={item.id}
                 name={item.title}
                 price={`R$${item.price}`}
                 description={item.ingredients}

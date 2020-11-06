@@ -19,6 +19,8 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
+import { useStore } from '~/store/index';
+
 import {
   Container,
   Content,
@@ -34,10 +36,34 @@ import {
   StyledDialogContent,
 } from './styled';
 
-const ProductCard = ({ style, source, price, name, description }) => {
+const ProductCard = ({ style, source, price, name, description, id }) => {
+  const extras = useStore((state) => state.extras);
+  const addToCart = useStore((state) => state.addToCart);
   const [modalVisible, setModalVisible] = useState(false);
   const [additionalsVisible, setAdditionalsVisible] = useState(false);
+  const [product, setProduct] = useState({
+    id: null,
+    amount: 0,
+    extras: [],
+  });
   const totalPrice = '22,50';
+
+  const handleExtraClick = (extraId) => {
+    const extraAlreadySelected = product.extras.includes(extraId);
+
+    if (extraAlreadySelected) {
+      setProduct((prevState) => ({
+        ...prevState,
+        extras: prevState.extras.filter((extra) => extra !== extraId),
+      }));
+    } else {
+      setProduct((prevState) => ({
+        ...prevState,
+        extras: [...prevState.extras, extraId],
+      }));
+    }
+  };
+
   return (
     <>
       <Container {...{ style }}>
@@ -82,12 +108,21 @@ const ProductCard = ({ style, source, price, name, description }) => {
             </ListItem>
             <Collapse in={additionalsVisible} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItem button>
-                  <ListItemText primary="Starred" secondary="R$2,00" />
-                  <ListItemSecondaryAction>
-                    <Checkbox edge="end" checked />
-                  </ListItemSecondaryAction>
-                </ListItem>
+                {extras.map((extra, index) => (
+                  <ListItem button key={`extra-${index}`}>
+                    <ListItemText
+                      primary={extra.title}
+                      secondary={extra.price}
+                    />
+                    <ListItemSecondaryAction>
+                      <Checkbox
+                        edge="end"
+                        checked={product.extras.includes(extra.id)}
+                        onClick={() => handleExtraClick(extra.id)}
+                      />
+                    </ListItemSecondaryAction>
+                  </ListItem>
+                ))}
               </List>
             </Collapse>
           </List>
