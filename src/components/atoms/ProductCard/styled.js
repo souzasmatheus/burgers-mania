@@ -6,6 +6,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import DialogContent from '@material-ui/core/DialogContent';
+import DialogActions from '@material-ui/core/DialogActions';
 
 export const Container = styled(Card)`
   width: 130px;
@@ -61,14 +62,23 @@ export const Description = styled.p`
   color: #404040;
 `;
 
-export const ModalPrice = styled(Button)`
+export const DisabledButton = styled(Button).attrs({
+  disabled: true,
+})`
   && {
     color: black;
   }
 `;
 
 export const StyledDialogContent = styled(DialogContent)`
+  border-top: none;
+  min-height: 60px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 16px 24px;
+  align-items: center;
+`;
+
+export const StyledDialogActions = styled(DialogActions)`
+  justify-content: space-around;
 `;

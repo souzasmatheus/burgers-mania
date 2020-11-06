@@ -31,9 +31,10 @@ import {
   ActionArea,
   StyledAvatar,
   ModalTitle,
-  ModalPrice,
+  DisabledButton,
   Description,
   StyledDialogContent,
+  StyledDialogActions
 } from './styled';
 
 const ProductCard = ({ style, source, price, name, description, id }) => {
@@ -43,7 +44,7 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
   const [additionalsVisible, setAdditionalsVisible] = useState(false);
   const [product, setProduct] = useState({
     id: null,
-    amount: 0,
+    amount: 1,
     extras: [],
   });
   const totalPrice = '22,50';
@@ -127,17 +128,21 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
             </Collapse>
           </List>
         </DialogContent>
-        <StyledDialogContent>
+        <StyledDialogContent dividers>
           <ButtonGroup aria-label="small contained button group">
             <Button>
               <Remove />
             </Button>
-            <ModalPrice disabled>Total: R${totalPrice}</ModalPrice>
+            <DisabledButton disabled>{product.amount}</DisabledButton>
             <Button>
               <Add />
             </Button>
           </ButtonGroup>
         </StyledDialogContent>
+        <StyledDialogActions >
+          <DisabledButton disabled>Total: R$14.90</DisabledButton>
+          <Button color="primary">Adicionar</Button>
+        </StyledDialogActions>
       </Dialog>
     </>
   );
