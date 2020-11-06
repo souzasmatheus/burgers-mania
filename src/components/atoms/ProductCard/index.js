@@ -34,12 +34,11 @@ import {
   DisabledButton,
   Description,
   StyledDialogContent,
-  StyledDialogActions
+  StyledDialogActions,
 } from './styled';
 
-const ProductCard = ({ style, source, price, name, description, id }) => {
+const ProductCard = ({ style, source, price, name, description }) => {
   const extras = useStore((state) => state.extras);
-  const addToCart = useStore((state) => state.addToCart);
   const [modalVisible, setModalVisible] = useState(false);
   const [additionalsVisible, setAdditionalsVisible] = useState(false);
   const [product, setProduct] = useState({
@@ -47,7 +46,6 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
     amount: 1,
     extras: [],
   });
-  const totalPrice = '22,50';
 
   const handleExtraClick = (extraId) => {
     const extraAlreadySelected = product.extras.includes(extraId);
@@ -63,6 +61,14 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
         extras: [...prevState.extras, extraId],
       }));
     }
+  };
+
+  const handleAmountChange = (value) => {
+    const newValue = product.amount + value > 1 ? product.amount + value : 1;
+    setProduct((prevState) => ({
+      ...prevState,
+      amount: newValue,
+    }));
   };
 
   return (
@@ -130,16 +136,16 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
         </DialogContent>
         <StyledDialogContent dividers>
           <ButtonGroup aria-label="small contained button group">
-            <Button>
+            <Button onClick={() => handleAmountChange(-1)}>
               <Remove />
             </Button>
             <DisabledButton disabled>{product.amount}</DisabledButton>
             <Button>
-              <Add />
+              <Add onClick={() => handleAmountChange(1)} />
             </Button>
           </ButtonGroup>
         </StyledDialogContent>
-        <StyledDialogActions >
+        <StyledDialogActions>
           <DisabledButton disabled>Total: R$14.90</DisabledButton>
           <Button color="primary">Adicionar</Button>
         </StyledDialogActions>
