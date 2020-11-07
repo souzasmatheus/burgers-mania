@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Container } from '~/components/templates';
 import { SearchBar, ProductCard, CartButton } from '~/components/atoms';
 import { Categories, HorizontalScroller } from '~/components/molecules';
+import { OrderCard } from '~/components/organism';
 
 import { useStore } from '~/store/index';
 
@@ -14,6 +15,7 @@ import { styles } from './styled';
 export default () => {
   const products = useStore((state) => state.products);
   const [categoriesVisible, setCategoriesVisible] = useState(false);
+  const [orderModalVisible, setOrderModalVisible] = useState(false);
 
   const categories = getCategories(products);
 
@@ -55,7 +57,11 @@ export default () => {
           />
         );
       })}
-      <CartButton />
+      <CartButton handleCartButtonClick={() => setOrderModalVisible(true)} />
+      <OrderCard
+        visible={orderModalVisible}
+        handleClose={() => setOrderModalVisible(false)}
+      />
     </Container>
   );
 };
