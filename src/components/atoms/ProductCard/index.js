@@ -11,6 +11,8 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '@material-ui/lab/Alert';
 
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -43,6 +45,7 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
     state.addToCart,
   ]);
   const [modalVisible, setModalVisible] = useState(false);
+  const [snackbarVisible, setSnackbarVisible] = useState(false);
   const [additionalsVisible, setAdditionalsVisible] = useState(false);
   const [product, setProduct] = useState({
     amount: 1,
@@ -90,6 +93,7 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
       total,
     });
     resetState();
+    setSnackbarVisible(true);
   };
 
   const resetState = () => {
@@ -182,6 +186,15 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
           </Button>
         </StyledDialogActions>
       </Dialog>
+      <Snackbar
+        open={snackbarVisible}
+        autoHideDuration={2500}
+        onClose={() => setSnackbarVisible(false)}
+      >
+        <Alert severity="success" elevation={6} variant="filled">
+          Adicionado com sucesso ao seu carrinho!
+        </Alert>
+      </Snackbar>
     </>
   );
 };
