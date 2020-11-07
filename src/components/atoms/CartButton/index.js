@@ -6,10 +6,15 @@ import { useStore } from '~/store/index';
 
 import { StyledBadge } from './styled';
 
-const CartButton = () => {
+const CartButton = ({ handleCartButtonClick }) => {
   const cart = useStore((state) => state.cart);
   return (
-    <StyledBadge color="secondary" badgeContent={cart.length} overlap="circle">
+    <StyledBadge
+      color="secondary"
+      badgeContent={cart.length}
+      overlap="circle"
+      onClick={handleCartButtonClick}
+    >
       <Fab>
         <ShoppingCartIcon />
       </Fab>
