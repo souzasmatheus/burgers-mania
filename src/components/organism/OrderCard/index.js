@@ -12,7 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 import { useStore } from '~/store/index';
 
-import { DisabledButton } from '~/components/atoms';
+import { DisabledButton, CloseButton } from '~/components/atoms';
 
 import {
   getProductString,
@@ -49,6 +49,7 @@ const OrderCard = ({ visible, handleClose }) => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle>Confirmação do pedido</DialogTitle>
+      <CloseButton onClick={handleClose} />
       {cart.length > 0 ? (
         <>
           <DialogContent>

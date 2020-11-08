@@ -23,7 +23,7 @@ import Remove from '@material-ui/icons/Remove';
 
 import { useStore } from '~/store/index';
 
-import { DisabledButton } from '~/components/atoms';
+import { DisabledButton, CloseButton } from '~/components/atoms';
 
 import {
   Container,
@@ -123,11 +123,10 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
         fullWidth
         onClose={() => setModalVisible(false)}
         open={modalVisible}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
       >
+        <CloseButton onClick={() => setModalVisible(false)} />
         <StyledAvatar alt="product" src={source} />
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle>
           <ModalTitle>{name}</ModalTitle>
           <Description>{description}</Description>
         </DialogTitle>
