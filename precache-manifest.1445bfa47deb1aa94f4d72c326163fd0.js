@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb948c162ace3fd840cc7416ca87bafd",
+    "revision": "71ffbef9d6b8ee1a31c7cf9c74e4a739",
     "url": "/burgers-mania/index.html"
   },
   {
-    "revision": "2e2f0a87934af4e1bb2c",
+    "revision": "2fd52490abef51c71b08",
     "url": "/burgers-mania/static/css/main.d4dde59c.chunk.css"
   },
   {
-    "revision": "59cd7d99297af26cc3a2",
-    "url": "/burgers-mania/static/js/2.4d9e1904.chunk.js"
+    "revision": "1247255b9eaa5081d364",
+    "url": "/burgers-mania/static/js/2.4b4b4162.chunk.js"
   },
   {
     "revision": "3ae8240266c7f67b942dab69ea230db8",
-    "url": "/burgers-mania/static/js/2.4d9e1904.chunk.js.LICENSE.txt"
+    "url": "/burgers-mania/static/js/2.4b4b4162.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e2f0a87934af4e1bb2c",
-    "url": "/burgers-mania/static/js/main.3f8d2c6c.chunk.js"
+    "revision": "2fd52490abef51c71b08",
+    "url": "/burgers-mania/static/js/main.3f7f92ed.chunk.js"
   },
   {
     "revision": "200e2bd9a1dc99060a54",
