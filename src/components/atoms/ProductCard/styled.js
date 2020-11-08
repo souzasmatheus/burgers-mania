@@ -4,7 +4,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
 
@@ -60,14 +59,6 @@ export const Description = styled.p`
   text-align: center;
   font-size: 14px;
   color: #404040;
-`;
-
-export const DisabledButton = styled(Button).attrs({
-  disabled: true,
-})`
-  && {
-    color: black;
-  }
 `;
 
 export const StyledDialogContent = styled(DialogContent)`

@@ -23,6 +23,8 @@ import Remove from '@material-ui/icons/Remove';
 
 import { useStore } from '~/store/index';
 
+import { DisabledButton } from '~/components/atoms';
+
 import {
   Container,
   Content,
@@ -33,7 +35,6 @@ import {
   ActionArea,
   StyledAvatar,
   ModalTitle,
-  DisabledButton,
   Description,
   StyledDialogContent,
   StyledDialogActions,
