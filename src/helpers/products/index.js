@@ -15,3 +15,12 @@ export const getExtrasString = (extrasIds, extras) =>
   extrasIds
     .map((id) => extras.find((extra) => extra.id === id).title)
     .join(', ');
+
+export const getTotalPrice = (cart) => {
+  const sum = cart.reduce(
+    (accumulator, product) => parseFloat(product.total) + accumulator,
+    0
+  );
+
+  return sum.toFixed(2);
+};

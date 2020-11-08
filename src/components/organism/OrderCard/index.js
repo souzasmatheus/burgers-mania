@@ -2,7 +2,6 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogActions from '@material-ui/core/DialogActions';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
@@ -13,10 +12,16 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 import { useStore } from '~/store/index';
 
-import { getProductString, getExtrasString } from '~/helpers/products';
+import { DisabledButton } from '~/components/atoms';
+
+import {
+  getProductString,
+  getExtrasString,
+  getTotalPrice,
+} from '~/helpers/products';
 import { getFinalString } from '~/helpers/string';
 
-import { StyledButton, StyledWhatsapp } from './styled';
+import { StyledButton, StyledWhatsapp, StyledDialogActions } from './styled';
 
 const OrderCard = ({ visible, handleClose }) => {
   const [cart, products, extras, removeFromCart] = useStore((state) => [
@@ -70,7 +75,8 @@ const OrderCard = ({ visible, handleClose }) => {
               ))}
             </List>
           </DialogContent>
-          <DialogActions>
+          <StyledDialogActions>
+            <DisabledButton>Total: R${getTotalPrice(cart)}</DisabledButton>
             <StyledButton
               variant="outlined"
               startIcon={<StyledWhatsapp />}
@@ -78,7 +84,7 @@ const OrderCard = ({ visible, handleClose }) => {
             >
               Enviar pedido
             </StyledButton>
-          </DialogActions>
+          </StyledDialogActions>
         </>
       ) : (
         <DialogContent>
