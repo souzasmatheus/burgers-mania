@@ -5,7 +5,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '8.00',
+    price: { spa: '8.00', cf: '8.00' },
     ingredients:
       'Pão com gergelim, 2 carnes, 2 queijos, salada e molho especial',
   },
@@ -15,7 +15,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '8.00',
+    price: { spa: '8.00', cf: '8.00' },
     ingredients: 'Pão careca, 2 carnes, 2 queijos, salada e molho acebolado',
   },
   {
@@ -24,7 +24,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '8.00',
+    price: { spa: '8.00', cf: '8.00' },
     ingredients:
       'Pão com gergelim, 1 carne de picanha, 1 queijo, salada e molho especial',
   },
@@ -34,7 +34,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '8.20',
+    price: { spa: '8.20', cf: '8.20' },
     ingredients:
       'Pão careca, 2 carnes, 2 queijos, picles, salada e molho especial',
   },
@@ -44,7 +44,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '11.00',
+    price: { spa: '11.00', cf: '11.00' },
     ingredients:
       'Pão com gergelim, 2 carnes de picanha, 2 queijos, salada e molho especial',
   },
@@ -54,7 +54,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '8.50',
+    price: { spa: '8.50', cf: '8.50' },
     ingredients:
       'Pão com gergelim, 2 carnes, 3 queijos, bacon, salada e molho especial',
   },
@@ -64,7 +64,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '9.00',
+    price: { spa: '9.00', cf: '9.00' },
     ingredients: 'Pão careca, 3 carnes, 3 queijos, salada e molho especial',
   },
   {
@@ -73,7 +73,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '5.50',
+    price: { spa: '5.50', cf: '5.50' },
     ingredients: 'Pão careca, 1 carne, queijo, salada e molho especial',
   },
   {
@@ -82,7 +82,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '10.50',
+    price: { spa: '10.50', cf: '10.50' },
     ingredients:
       'Pão com gergelim, 4 carnes, 4 queijos, salada e molho especial',
   },
@@ -92,7 +92,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '10.50',
+    price: { spa: '10.50', cf: '10.50' },
     ingredients:
       'Pão com gergelim, 2 carnes, 3 queijos, calabresa, 1 ovo, cheddar, bacon, salada e molho especial',
   },
@@ -102,7 +102,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '13.90',
+    price: { spa: '13.90', cf: '13.90' },
     ingredients:
       'Pão com gergelim, 4 carnes, 5 queijos, calabresa, bacon, cheddar, salada e molho especial',
   },
@@ -112,7 +112,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '15.90',
+    price: { spa: '15.90', cf: '15.90' },
     ingredients:
       'Pão com gergelim, 4 carnes, 5 queijos, 3 ovos, 2 bacons, salada e molho especial',
   },
@@ -122,7 +122,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '9.50',
+    price: { spa: '9.50', cf: '9.50' },
     ingredients:
       'Pão com gergelim, filé de frango, queijo, catupiry, salada e molho especial',
   },
@@ -132,7 +132,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '14.50',
+    price: { spa: '14.50', cf: '14.50' },
     ingredients:
       'Pão com gergelim, contra filé, queijo, cebola roxa, salada e molho barbecue',
   },
@@ -142,7 +142,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '20.00',
+    price: { spa: '20.00', cf: '20.00' },
     ingredients:
       'Pão com gergelim, 6 carnes, 6 queijos, 3 ovos, filé de frango, 2 bacons, calabresa, cheddar, salada e molho especial',
   },
@@ -152,7 +152,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '13.50',
+    price: { spa: '13.50', cf: '13.50' },
     ingredients:
       'Pão com gergelim, 2 linguiças toscanas, queijo, cebola roxa, ovo, salada e molho especial',
   },
@@ -162,7 +162,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '13.90',
+    price: { spa: '13.90', cf: '13.90' },
     ingredients:
       'Pão careca, 1 carne de picanha, queijo padrão, banana, bacon e molho especial',
   },
@@ -172,7 +172,7 @@ module.exports = [
     type: 'burgers',
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
-    price: '13.00',
+    price: { spa: '13.00', cf: '13.00' },
     ingredients:
       'Pão com gergelim, cream cheese, peito de peru, orégano, queijo, filé de frango, bacon, cebola roxa, salada e molho especial',
   },
@@ -180,7 +180,7 @@ module.exports = [
   //   title: 'Trio Nº 1',
   //   id: 18,
   //   type: 'meal',
-  //   price: '15.00',
+  //   price: {'spa': , 'cf':} '15.00',
   //   ingredients:
   //     'Pão com gergelim, 2 carnes, 2 queijos, salada e molho especial',
   // },
@@ -188,14 +188,14 @@ module.exports = [
   //   title: 'Trio Nº 2',
   //   id: 19,
   //   type: 'meal',
-  //   price: '15.00',
+  //   price: {'spa': , 'cf':} '15.00',
   //   ingredients: 'Pão careca, 2 carnes, 2 queijos, salada e molho acebolado',
   // },
   // {
   //   title: 'Trio Nº 3',
   //   id: 20,
   //   type: 'meal',
-  //   price: '15.00',
+  //   price: {'spa': , 'cf':} '15.00',
   //   ingredients:
   //     'Pão com gergelim, 1 carne de picanha, 1 queijo, salada e molho especial',
   // },
@@ -203,7 +203,7 @@ module.exports = [
   //   title: 'Trio Nº 4',
   //   id: 21,
   //   type: 'meal',
-  //   price: '15.00',
+  //   price: {'spa': , 'cf':} '15.00',
   //   ingredients:
   //     'Pão careca, 2 carnes, 2 queijos, picles, salada e molho especial',
   // },
@@ -211,7 +211,7 @@ module.exports = [
   //   title: 'Trio Nº 5',
   //   id: 22,
   //   type: 'meal',
-  //   price: '17.50',
+  //   price: {'spa': , 'cf':} '17.50',
   //   ingredients:
   //     'Pão com gergelim, 2 carnes de picanha, 2 queijos, salada e molho especial',
   // },
@@ -219,7 +219,7 @@ module.exports = [
   //   title: 'Trio Nº 6',
   //   id: 23,
   //   type: 'meal',
-  //   price: '15.00',
+  //   price: {'spa': , 'cf':} '15.00',
   //   ingredients:
   //     'Pão com gergelim, 2 carnes, 3 queijos, bacon, salada e molho especial',
   // },
@@ -227,21 +227,21 @@ module.exports = [
   //   title: 'Trio Nº 7',
   //   id: 24,
   //   type: 'meal',
-  //   price: '15.50',
+  //   price: {'spa': , 'cf':} '15.50',
   //   ingredients: 'Pão careca, 3 carnes, 3 queijos, salada e molho especial',
   // },
   // {
   //   title: 'Trio Nº 8',
   //   id: 25,
   //   type: 'meal',
-  //   price: '10.50',
+  //   price: {'spa': , 'cf':} '10.50',
   //   ingredients: 'Pão careca, 1 carne, queijo, salada e molho especial',
   // },
   // {
   //   title: 'Trio Nº 9',
   //   id: 26,
   //   type: 'meal',
-  //   price: '17.00',
+  //   price: {'spa': , 'cf':} '17.00',
   //   ingredients:
   //     'Pão com gergelim, 4 carnes, 4 queijos, salada e molho especial',
   // },
@@ -249,7 +249,7 @@ module.exports = [
   //   title: 'Trio Nº 10',
   //   id: 27,
   //   type: 'meal',
-  //   price: '17.00',
+  //   price: {'spa': , 'cf':} '17.00',
   //   ingredients:
   //     'Pão com gergelim, 2 carnes, 3 queijos, calabresa, 1 ovo, cheddar, bacon, salada e molho especial',
   // },
@@ -257,7 +257,7 @@ module.exports = [
   //   title: 'Trio Nº 11',
   //   id: 28,
   //   type: 'meal',
-  //   price: '19.90',
+  //   price: {'spa': , 'cf':} '19.90',
   //   ingredients:
   //     'Pão com gergelim, 4 carnes, 5 queijos, calabresa, bacon, cheddar, salada e molho especial',
   // },
@@ -265,7 +265,7 @@ module.exports = [
   //   title: 'Trio Nº 12',
   //   id: 29,
   //   type: 'meal',
-  //   price: '22.00',
+  //   price: {'spa': , 'cf':} '22.00',
   //   ingredients:
   //     'Pão com gergelim, 4 carnes, 5 queijos, 3 ovos, 2 bacons, salada e molho especial',
   // },
@@ -273,7 +273,7 @@ module.exports = [
   //   title: 'Trio Nº 13',
   //   id: 30,
   //   type: 'meal',
-  //   price: '16.00',
+  //   price: {'spa': , 'cf':} '16.00',
   //   ingredients:
   //     'Pão com gergelim, filé de frango, queijo, catupiry, salada e molho especial',
   // },
@@ -281,7 +281,7 @@ module.exports = [
   //   title: 'Trio Nº 14',
   //   id: 31,
   //   type: 'meal',
-  //   price: '22.00',
+  //   price: {'spa': , 'cf':} '22.00',
   //   ingredients:
   //     'Pão com gergelim, contra filé, queijo, cebola roxa, salada e molho barbecue',
   // },
@@ -289,7 +289,7 @@ module.exports = [
   //   title: 'Trio Nº 15',
   //   id: 32,
   //   type: 'meal',
-  //   price: '26.50',
+  //   price: {'spa': , 'cf':} '26.50',
   //   ingredients:
   //     'Pão com gergelim, 6 carnes, 6 queijos, 3 ovos, filé de frango, 2 bacons, calabresa, cheddar, salada e molho especial',
   // },
@@ -297,7 +297,7 @@ module.exports = [
   //   title: 'Trio Nº 16',
   //   id: 33,
   //   type: 'meal',
-  //   price: '18.00',
+  //   price: {'spa': , 'cf':} '18.00',
   //   ingredients:
   //     'Pão com gergelim, 2 linguiças toscanas, queijo, cebola roxa, ovo, salada e molho especial',
   // },
@@ -305,7 +305,7 @@ module.exports = [
   //   title: 'Trio Nº 17',
   //   id: 34,
   //   type: 'meal',
-  //   price: '19.90',
+  //   price: {'spa': , 'cf':} '19.90',
   //   ingredients:
   //     'Pão careca, 1 carne de picanha, queijo padrão, banana, bacon e molho especial',
   // },
@@ -313,7 +313,7 @@ module.exports = [
   //   title: 'Trio Nº 18',
   //   id: 35,
   //   type: 'meal',
-  //   price: '18.00',
+  //   price: {'spa': , 'cf':} '18.00',
   //   ingredients:
   //     'Pão com gergelim, cream cheese, peito de peru, orégano, queijo, filé de frango, bacon, cebola roxa, salada e molho especial',
   // },
@@ -323,7 +323,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '4.50',
+    price: { spa: '4.50', cf: '4.50' },
     ingredients: 'Batata pequena',
   },
   {
@@ -332,7 +332,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '8.00',
+    price: { spa: '8.00', cf: '8.00' },
     ingredients: 'Batata grande',
   },
   {
@@ -341,7 +341,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '10.00',
+    price: { spa: '10.00', cf: '10.00' },
     ingredients: 'Batata, queijo/cheddar, orégano e bacon',
   },
   {
@@ -350,7 +350,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '12.00',
+    price: { spa: '12.00', cf: '12.00' },
     ingredients: 'Batata, queijo/cheddar, orégano, bacon e calabresa',
   },
   {
@@ -359,7 +359,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '15.00',
+    price: { spa: '15.00', cf: '15.00' },
     ingredients:
       'Batata, queijo/cheddar, orégano, bacon, calabresa e filé de frango (sassami)',
   },
@@ -369,7 +369,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '22.00',
+    price: { spa: '22.00', cf: '22.00' },
     ingredients:
       'Batata, queijo/cheddar, orégano, bacon, calabresa e filé de peito de frango',
   },
@@ -379,7 +379,7 @@ module.exports = [
     type: 'batatas',
     source:
       'https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    price: '25.00',
+    price: { spa: '25.00', cf: '25.00' },
     ingredients:
       'Batata, queijo/cheddar, orégano, bacon, calabresa, filé de peito de frango e contra filé temperado',
   },
@@ -389,7 +389,7 @@ module.exports = [
     type: 'baurus',
     source:
       'https://images.unsplash.com/photo-1554433607-66b5efe9d304?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
-    price: '15.00',
+    price: { spa: '15.00', cf: '15.00' },
     ingredients:
       'Salada, 2 ovos, queijo, bacon, calabresa, batata frita, filé de peito de frango e catupiry',
   },

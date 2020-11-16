@@ -7,9 +7,11 @@ export const useStore = create((set) => ({
   products,
   extras,
   cart: [],
+  location: null,
   addToCart: (product) => set((state) => ({ cart: [...state.cart, product] })),
   removeFromCart: (indexToRemove) =>
     set((state) => ({
       cart: [...state.cart.filter((product, index) => index !== indexToRemove)],
     })),
+  setLocation: (location) => set(() => ({ location })),
 }));
