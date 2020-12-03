@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 
 import { Container } from '~/components/templates';
-import {
-  SearchBar,
-  ProductCard,
-  CartButton,
-  LocationCard,
-} from '~/components/atoms';
+import { SearchBar, CartButton, LocationCard } from '~/components/atoms';
 import { Categories, HorizontalScroller } from '~/components/molecules';
-import { OrderCard } from '~/components/organism';
+import { OrderCard, ProductCard } from '~/components/organism';
 
 import { useStore } from '~/store/index';
 

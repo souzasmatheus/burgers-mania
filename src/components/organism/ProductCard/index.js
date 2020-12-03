@@ -22,7 +22,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-import { useStore } from '~/store/index';
+import { useStore } from '~/store';
 
 import { DisabledButton, CloseButton } from '~/components/atoms';
 
