@@ -1,4 +1,3 @@
-export { default as SearchBar } from './SearchBar';
 export { default as CategoryCard } from './CategoryCard';
 export { default as LinkIcon } from './LinkIcon';
 export { default as CartButton } from './CartButton';

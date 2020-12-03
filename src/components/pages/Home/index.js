@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import { Container } from '~/components/templates';
-import { SearchBar, CartButton, LocationCard } from '~/components/atoms';
-import { Categories, HorizontalScroller } from '~/components/molecules';
+import { CartButton, LocationCard } from '~/components/atoms';
+import { HorizontalScroller } from '~/components/molecules';
 import { OrderCard, ProductCard } from '~/components/organism';
 
 import { useStore } from '~/store/index';
@@ -17,18 +17,12 @@ export default () => {
     state.products,
     state.location,
   ]);
-  const [categoriesVisible, setCategoriesVisible] = useState(false);
   const [orderModalVisible, setOrderModalVisible] = useState(false);
 
   const categories = getCategories(products);
 
-  const toggleCategoriesVisible = () =>
-    setCategoriesVisible(!categoriesVisible);
-
   return (
     <Container>
-      <SearchBar onSettingsClick={toggleCategoriesVisible} />
-      <Categories visible={categoriesVisible} />
       {categories.map((category) => {
         const currentCategoryProducts = getSingleCategoryProducts(
           products,
