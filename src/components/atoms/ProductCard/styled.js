@@ -52,10 +52,10 @@ export const ModalTitle = styled.p`
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 `;
 
 export const Description = styled.p`
-  margin-top: 10px;
   text-align: center;
   font-size: 14px;
   color: #404040;
@@ -72,4 +72,10 @@ export const StyledDialogContent = styled(DialogContent)`
 
 export const StyledDialogActions = styled(DialogActions)`
   justify-content: space-around;
+`;
+
+export const SwitchContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
 `;

@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
+import Switch from '@material-ui/core/Switch';
 
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -38,9 +39,19 @@ import {
   Description,
   StyledDialogContent,
   StyledDialogActions,
+  SwitchContainer,
 } from './styled';
 
-const ProductCard = ({ style, source, price, name, description, id }) => {
+const ProductCard = ({
+  style,
+  source,
+  price,
+  name,
+  description,
+  id,
+  specialCondition,
+  specialConditionPrice,
+}) => {
   const [extras, addToCart] = useStore((state) => [
     state.extras,
     state.addToCart,
@@ -53,15 +64,18 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
     extras: [],
   });
   const [total, setTotal] = useState(price);
+  const [isCombo, setCombo] = useState(false);
 
   useEffect(() => {
     const extrasTotal = product.extras.reduce((accumulator, currentValue) => {
       const { price } = extras.find((extra) => extra.id === currentValue);
       return accumulator + parseFloat(price);
     }, 0);
-    const sum = (extrasTotal + parseFloat(price)) * product.amount;
+    const sum =
+      (extrasTotal + parseFloat(isCombo ? specialConditionPrice : price)) *
+      product.amount;
     setTotal(sum.toFixed(2));
-  }, [product, extras, price]);
+  }, [product, extras, price, isCombo]);
 
   const handleExtraClick = (extraId) => {
     const extraAlreadySelected = product.extras.includes(extraId);
@@ -92,6 +106,7 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
       ...product,
       id,
       total,
+      isCombo,
     });
     resetState();
     setSnackbarVisible(true);
@@ -103,6 +118,7 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
       extras: [],
     });
     setTotal(price);
+    setCombo(false);
   };
 
   return (
@@ -129,6 +145,15 @@ const ProductCard = ({ style, source, price, name, description, id }) => {
         <DialogTitle>
           <ModalTitle>{name}</ModalTitle>
           <Description>{description}</Description>
+          {specialCondition && (
+            <SwitchContainer>
+              <Switch
+                checked={isCombo}
+                onChange={() => setCombo((prevState) => !prevState)}
+              />
+              <Description>{specialCondition}</Description>
+            </SwitchContainer>
+          )}
         </DialogTitle>
         <DialogContent dividers>
           <List

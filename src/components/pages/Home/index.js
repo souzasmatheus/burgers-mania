@@ -46,6 +46,8 @@ export default () => {
             data={currentCategoryProducts}
             renderItem={(item, index) => (
               <ProductCard
+                specialCondition={item.specialCondition?.name}
+                specialConditionPrice={item.specialCondition?.price[location]}
                 id={item.id}
                 name={item.title}
                 price={item.price[location]}

@@ -6,9 +6,11 @@ export const getSingleCategoryProducts = (products, category) =>
   products.filter((product) => product.type === category);
 
 export const getProductString = (productOrder, products) => {
-  const { amount, id } = productOrder;
+  const { amount, id, isCombo } = productOrder;
   const { title } = products.find((product) => product.id === id);
-  return `${amount} ${title}`;
+  return isCombo
+    ? `${amount} trio${amount > 1 ? 's' : ''} de ${title}`
+    : `${amount} ${title}`;
 };
 
 export const getExtrasString = (extrasIds, extras) =>

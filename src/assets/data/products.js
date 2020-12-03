@@ -3,6 +3,10 @@ module.exports = [
     title: 'Nº 1',
     id: 0,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '25.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '8.00', cf: '8.00' },
@@ -13,6 +17,10 @@ module.exports = [
     title: 'Nº 2',
     id: 1,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '8.00', cf: '8.00' },
@@ -22,6 +30,10 @@ module.exports = [
     title: 'Nº 3',
     id: 2,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '8.00', cf: '8.00' },
@@ -32,6 +44,10 @@ module.exports = [
     title: 'Nº 4',
     id: 3,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '8.20', cf: '8.20' },
@@ -42,6 +58,10 @@ module.exports = [
     title: 'Nº 5',
     id: 4,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '11.00', cf: '11.00' },
@@ -52,6 +72,10 @@ module.exports = [
     title: 'Nº 6',
     id: 5,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '8.50', cf: '8.50' },
@@ -62,6 +86,10 @@ module.exports = [
     title: 'Nº 7',
     id: 6,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '9.00', cf: '9.00' },
@@ -71,6 +99,10 @@ module.exports = [
     title: 'Nº 8',
     id: 7,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '5.50', cf: '5.50' },
@@ -80,6 +112,10 @@ module.exports = [
     title: 'Nº 9',
     id: 8,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '10.50', cf: '10.50' },
@@ -90,6 +126,10 @@ module.exports = [
     title: 'Nº 10',
     id: 9,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '10.50', cf: '10.50' },
@@ -100,6 +140,10 @@ module.exports = [
     title: 'Nº 11',
     id: 10,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '13.90', cf: '13.90' },
@@ -110,6 +154,10 @@ module.exports = [
     title: 'Nº 12',
     id: 11,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '15.90', cf: '15.90' },
@@ -120,6 +168,10 @@ module.exports = [
     title: 'Nº 13',
     id: 12,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '9.50', cf: '9.50' },
@@ -130,6 +182,10 @@ module.exports = [
     title: 'Nº 14',
     id: 13,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '14.50', cf: '14.50' },
@@ -140,6 +196,10 @@ module.exports = [
     title: 'Nº 15',
     id: 14,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '20.00', cf: '20.00' },
@@ -150,6 +210,10 @@ module.exports = [
     title: 'Nº 16',
     id: 15,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '13.50', cf: '13.50' },
@@ -160,6 +224,10 @@ module.exports = [
     title: 'Nº 17',
     id: 16,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '13.90', cf: '13.90' },
@@ -170,6 +238,10 @@ module.exports = [
     title: 'Nº 18',
     id: 17,
     type: 'burgers',
+    specialCondition: {
+      name: 'Adicionar refrigerante e batata',
+      price: { spa: '20.00', cf: '20.00' },
+    },
     source:
       'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=902&q=80',
     price: { spa: '13.00', cf: '13.00' },
