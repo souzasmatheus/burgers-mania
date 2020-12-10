@@ -24,11 +24,18 @@ import { getFinalString } from '~/helpers/string';
 import { StyledButton, StyledWhatsapp, StyledDialogActions } from './styled';
 
 const OrderCard = ({ visible, handleClose }) => {
-  const [cart, products, extras, removeFromCart] = useStore((state) => [
+  const [
+    cart,
+    products,
+    extras,
+    removeFromCart,
+    location,
+  ] = useStore((state) => [
     state.cart,
     state.products,
     state.extras,
     state.removeFromCart,
+    state.location,
   ]);
 
   const handleRemoveFromCart = (index) => {
@@ -37,7 +44,11 @@ const OrderCard = ({ visible, handleClose }) => {
 
   const handleCheckoutClick = () => {
     const string = getFinalString(cart, products, extras);
-    window.open(`https://wa.me/${process.env.REACT_APP_PHONE}?text=${string}`);
+    window.open(
+      `https://wa.me/${
+        process.env[`REACT_APP_PHONE_${location}`]
+      }?text=${string}`
+    );
   };
 
   return (
