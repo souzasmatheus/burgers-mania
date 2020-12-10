@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/burgers-mania/static/css/main.d4dde59c.chunk.css",
-    "main.js": "/burgers-mania/static/js/main.e03825fb.chunk.js",
-    "main.js.map": "/burgers-mania/static/js/main.e03825fb.chunk.js.map",
+    "main.js": "/burgers-mania/static/js/main.56779125.chunk.js",
+    "main.js.map": "/burgers-mania/static/js/main.56779125.chunk.js.map",
     "runtime-main.js": "/burgers-mania/static/js/runtime-main.05bdbbb2.js",
     "runtime-main.js.map": "/burgers-mania/static/js/runtime-main.05bdbbb2.js.map",
-    "static/js/2.33a62ae9.chunk.js": "/burgers-mania/static/js/2.33a62ae9.chunk.js",
-    "static/js/2.33a62ae9.chunk.js.map": "/burgers-mania/static/js/2.33a62ae9.chunk.js.map",
+    "static/js/2.f9f1b568.chunk.js": "/burgers-mania/static/js/2.f9f1b568.chunk.js",
+    "static/js/2.f9f1b568.chunk.js.map": "/burgers-mania/static/js/2.f9f1b568.chunk.js.map",
     "index.html": "/burgers-mania/index.html",
-    "precache-manifest.e8efd31cd9c749becc1325e9d736af25.js": "/burgers-mania/precache-manifest.e8efd31cd9c749becc1325e9d736af25.js",
+    "precache-manifest.8153f5211d5f745afd227dea694144d6.js": "/burgers-mania/precache-manifest.8153f5211d5f745afd227dea694144d6.js",
     "service-worker.js": "/burgers-mania/service-worker.js",
     "static/css/main.d4dde59c.chunk.css.map": "/burgers-mania/static/css/main.d4dde59c.chunk.css.map",
-    "static/js/2.33a62ae9.chunk.js.LICENSE.txt": "/burgers-mania/static/js/2.33a62ae9.chunk.js.LICENSE.txt",
+    "static/js/2.f9f1b568.chunk.js.LICENSE.txt": "/burgers-mania/static/js/2.f9f1b568.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/burgers-mania/static/media/logo.fa4c1047.png"
   },
   "entrypoints": [
     "static/js/runtime-main.05bdbbb2.js",
-    "static/js/2.33a62ae9.chunk.js",
+    "static/js/2.f9f1b568.chunk.js",
     "static/css/main.d4dde59c.chunk.css",
-    "static/js/main.e03825fb.chunk.js"
+    "static/js/main.56779125.chunk.js"
   ]
 }
