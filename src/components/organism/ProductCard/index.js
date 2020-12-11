@@ -146,7 +146,7 @@ const ProductCard = ({
         open={modalVisible}
       >
         <CloseButton onClick={() => setModalVisible(false)} />
-        <StyledAvatar alt="product" src={source} />
+        <StyledAvatar alt="product" src={imageSource} />
         <DialogTitle>
           <ModalTitle>{name}</ModalTitle>
           <Description>{description}</Description>
