@@ -26,6 +26,8 @@ import { useStore } from '~/store';
 
 import { DisabledButton, CloseButton } from '~/components/atoms';
 
+import { getDefaultImage } from '~/helpers/products';
+
 import {
   Container,
   Content,
@@ -48,6 +50,7 @@ const ProductCard = ({
   price,
   name,
   description,
+  type,
   id,
   specialCondition,
   specialConditionPrice,
@@ -65,6 +68,8 @@ const ProductCard = ({
   });
   const [total, setTotal] = useState(price);
   const [isCombo, setCombo] = useState(false);
+
+  const imageSource = source ? source : getDefaultImage(type);
 
   useEffect(() => {
     const extrasTotal = product.extras.reduce((accumulator, currentValue) => {
@@ -125,7 +130,7 @@ const ProductCard = ({
     <>
       <Container {...{ style }}>
         <ActionArea onClick={() => setModalVisible(true)}>
-          <StyledImage image={source} />
+          <StyledImage image={imageSource} />
           <Content>
             <Title>{name}</Title>
           </Content>

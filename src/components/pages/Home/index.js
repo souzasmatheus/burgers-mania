@@ -41,6 +41,7 @@ export default () => {
                 name={item.title}
                 price={item.price[location]}
                 description={item.ingredients}
+                type={item.type}
                 source={item.source}
                 style={
                   styles[

@@ -1,3 +1,7 @@
+import BaurusImg from '~/assets/images/default-baurus.jpeg';
+import BurgersImg from '~/assets/images/default-burgers.jpeg';
+import BatatasImg from '~/assets/images/default-batatas.jpeg';
+
 export const getCategories = (products) => [
   ...new Set(products.map((product) => product.type)),
 ];
@@ -26,3 +30,10 @@ export const getTotalPrice = (cart) => {
 
   return sum.toFixed(2);
 };
+
+export const getDefaultImage = (type) =>
+  ({
+    baurus: BaurusImg,
+    burgers: BurgersImg,
+    batatas: BatatasImg,
+  }[type]);
