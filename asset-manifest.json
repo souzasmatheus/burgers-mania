@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/www.burguers-mania.com.br/static/css/main.d4dde59c.chunk.css",
-    "main.js": "/www.burguers-mania.com.br/static/js/main.d6911725.chunk.js",
-    "main.js.map": "/www.burguers-mania.com.br/static/js/main.d6911725.chunk.js.map",
-    "runtime-main.js": "/www.burguers-mania.com.br/static/js/runtime-main.d6c74169.js",
-    "runtime-main.js.map": "/www.burguers-mania.com.br/static/js/runtime-main.d6c74169.js.map",
-    "static/js/2.d0bd7b56.chunk.js": "/www.burguers-mania.com.br/static/js/2.d0bd7b56.chunk.js",
-    "static/js/2.d0bd7b56.chunk.js.map": "/www.burguers-mania.com.br/static/js/2.d0bd7b56.chunk.js.map",
-    "index.html": "/www.burguers-mania.com.br/index.html",
-    "precache-manifest.7987dceed262d5eb9ff138deb21f6021.js": "/www.burguers-mania.com.br/precache-manifest.7987dceed262d5eb9ff138deb21f6021.js",
-    "service-worker.js": "/www.burguers-mania.com.br/service-worker.js",
-    "static/css/main.d4dde59c.chunk.css.map": "/www.burguers-mania.com.br/static/css/main.d4dde59c.chunk.css.map",
-    "static/js/2.d0bd7b56.chunk.js.LICENSE.txt": "/www.burguers-mania.com.br/static/js/2.d0bd7b56.chunk.js.LICENSE.txt",
-    "static/media/default-batatas.jpeg": "/www.burguers-mania.com.br/static/media/default-batatas.0fd07923.jpeg",
-    "static/media/default-baurus.jpeg": "/www.burguers-mania.com.br/static/media/default-baurus.f210f953.jpeg",
-    "static/media/default-burgers.jpeg": "/www.burguers-mania.com.br/static/media/default-burgers.986d553e.jpeg",
-    "static/media/logo.png": "/www.burguers-mania.com.br/static/media/logo.fa4c1047.png"
+    "main.css": "/burguers-mania.com.br/static/css/main.d4dde59c.chunk.css",
+    "main.js": "/burguers-mania.com.br/static/js/main.6f3846e3.chunk.js",
+    "main.js.map": "/burguers-mania.com.br/static/js/main.6f3846e3.chunk.js.map",
+    "runtime-main.js": "/burguers-mania.com.br/static/js/runtime-main.d8bec6ed.js",
+    "runtime-main.js.map": "/burguers-mania.com.br/static/js/runtime-main.d8bec6ed.js.map",
+    "static/js/2.acbc9f18.chunk.js": "/burguers-mania.com.br/static/js/2.acbc9f18.chunk.js",
+    "static/js/2.acbc9f18.chunk.js.map": "/burguers-mania.com.br/static/js/2.acbc9f18.chunk.js.map",
+    "index.html": "/burguers-mania.com.br/index.html",
+    "precache-manifest.5a9efde732c1d3ee272b8ede68968765.js": "/burguers-mania.com.br/precache-manifest.5a9efde732c1d3ee272b8ede68968765.js",
+    "service-worker.js": "/burguers-mania.com.br/service-worker.js",
+    "static/css/main.d4dde59c.chunk.css.map": "/burguers-mania.com.br/static/css/main.d4dde59c.chunk.css.map",
+    "static/js/2.acbc9f18.chunk.js.LICENSE.txt": "/burguers-mania.com.br/static/js/2.acbc9f18.chunk.js.LICENSE.txt",
+    "static/media/default-batatas.jpeg": "/burguers-mania.com.br/static/media/default-batatas.0fd07923.jpeg",
+    "static/media/default-baurus.jpeg": "/burguers-mania.com.br/static/media/default-baurus.f210f953.jpeg",
+    "static/media/default-burgers.jpeg": "/burguers-mania.com.br/static/media/default-burgers.986d553e.jpeg",
+    "static/media/logo.png": "/burguers-mania.com.br/static/media/logo.fa4c1047.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6c74169.js",
-    "static/js/2.d0bd7b56.chunk.js",
+    "static/js/runtime-main.d8bec6ed.js",
+    "static/js/2.acbc9f18.chunk.js",
     "static/css/main.d4dde59c.chunk.css",
-    "static/js/main.d6911725.chunk.js"
+    "static/js/main.6f3846e3.chunk.js"
   ]
 }
