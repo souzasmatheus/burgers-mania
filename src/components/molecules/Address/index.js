@@ -42,7 +42,11 @@ const Address = ({ onNext }) => {
         />
       </StyledDialogContent>
       <DialogActions>
-        <Button endIcon={<NextIcon />} onClick={onNext}>
+        <Button
+          endIcon={<NextIcon />}
+          onClick={onNext}
+          disabled={!address[0] || !address[1]}
+        >
           Próximo
         </Button>
       </DialogActions>
