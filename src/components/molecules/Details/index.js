@@ -11,9 +11,17 @@ import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import NextIcon from '@material-ui/icons/NavigateNext';
 
+import { DisabledButton } from '~/components/atoms';
+
 import { useStore } from '~/store/index';
 
-import { getProductString, getExtrasString } from '~/helpers/products';
+import {
+  getProductString,
+  getExtrasString,
+  getTotalPrice,
+} from '~/helpers/products';
+
+import { StyledDialogActions } from './styled';
 
 const Details = ({ onNext }) => {
   const [cart, products, extras, removeFromCart] = useStore((state) => [
@@ -45,11 +53,12 @@ const Details = ({ onNext }) => {
           ))}
         </List>
       </DialogContent>
-      <DialogActions>
+      <StyledDialogActions>
+        <DisabledButton>Total: R${getTotalPrice(cart)}</DisabledButton>
         <Button endIcon={<NextIcon />} onClick={onNext}>
           Próximo
         </Button>
-      </DialogActions>
+      </StyledDialogActions>
     </>
   );
 };
