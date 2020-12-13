@@ -3,7 +3,13 @@ import { getProductString, getExtrasString } from '~/helpers/products';
 export const capitalize = (string) =>
   string.charAt(0).toUpperCase() + string.slice(1);
 
-export const getFinalString = (cart, products, extras) => {
+export const getAddressString = (address) => {
+  const [street, number] = address;
+
+  return `Endereço:\n🛵 - ${street}, ${number}`;
+};
+
+export const getFinalString = (cart, products, extras, address) => {
   const emojis = {
     burgers: '🍔',
     batatas: '🍟',
@@ -11,7 +17,7 @@ export const getFinalString = (cart, products, extras) => {
     combo: '🥡',
   };
 
-  const string = cart
+  const productsString = cart
     .map((product) => {
       const { type } = products.find((item) => item.id === product.id);
       const { isCombo } = product;
@@ -24,5 +30,5 @@ export const getFinalString = (cart, products, extras) => {
     })
     .join('\n');
 
-  return encodeURI(string);
+  return `${productsString}\n\n${getAddressString(address)}`;
 };

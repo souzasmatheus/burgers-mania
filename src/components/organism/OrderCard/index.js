@@ -1,102 +1,83 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import ListItemText from '@material-ui/core/ListItemText';
-import IconButton from '@material-ui/core/IconButton';
-
-import DeleteIcon from '@material-ui/icons/Delete';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 
 import { useStore } from '~/store/index';
 
-import { DisabledButton, CloseButton } from '~/components/atoms';
+import { CloseButton } from '~/components/atoms';
+import { Details, Address, CheckOut } from '~/components/molecules';
 
-import {
-  getProductString,
-  getExtrasString,
-  getTotalPrice,
-} from '~/helpers/products';
-import { getFinalString } from '~/helpers/string';
-
-import { StyledButton, StyledWhatsapp, StyledDialogActions } from './styled';
+import { BreadCrumbItem } from './styled';
 
 const OrderCard = ({ visible, handleClose }) => {
-  const [
-    cart,
-    products,
-    extras,
-    removeFromCart,
-    location,
-  ] = useStore((state) => [
+  const [selected, setSelected] = useState(0);
+  const [cart, setAddress] = useStore((state) => [
     state.cart,
-    state.products,
-    state.extras,
-    state.removeFromCart,
-    state.location,
+    state.setAddress,
   ]);
 
-  const handleRemoveFromCart = (index) => {
-    removeFromCart(index);
+  useEffect(() => {
+    const getUrl = (lat, lon) =>
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+
+    const success = (position) => {
+      const {
+        coords: { latitude, longitude },
+      } = position;
+
+      fetch(getUrl(latitude, longitude))
+        .then((response) => response.json())
+        .then((data) => {
+          const { road, house_number } = data.address;
+          setAddress([road, house_number]);
+        });
+    };
+
+    navigator.geolocation.getCurrentPosition(success);
+  }, []);
+
+  const handleCloseAndReset = () => {
+    handleClose();
+    setSelected(0);
   };
 
-  const handleCheckoutClick = () => {
-    const string = getFinalString(cart, products, extras);
-    window.open(
-      `https://wa.me/${
-        process.env[`REACT_APP_PHONE_${location}`]
-      }?text=${string}`
+  const content =
+    selected === 0 ? (
+      <Details onNext={() => setSelected(1)} />
+    ) : selected === 1 ? (
+      <Address onNext={() => setSelected(2)} />
+    ) : (
+      <CheckOut />
     );
-  };
 
   return (
     <Dialog
       fullWidth
-      onClose={handleClose}
+      onClose={handleCloseAndReset}
       open={visible}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle>Confirmação do pedido</DialogTitle>
-      <CloseButton onClick={handleClose} />
+      <DialogTitle>
+        <Breadcrumbs
+          style={{
+            margin: '0 auto',
+          }}
+          separator=">"
+        >
+          <BreadCrumbItem isSelected={selected === 0}>Detalhes</BreadCrumbItem>
+          <BreadCrumbItem isSelected={selected === 1}>Endereço</BreadCrumbItem>
+          <BreadCrumbItem isSelected={selected === 2}>
+            Finalização
+          </BreadCrumbItem>
+        </Breadcrumbs>
+      </DialogTitle>
+
+      <CloseButton onClick={handleCloseAndReset} />
       {cart.length > 0 ? (
-        <>
-          <DialogContent>
-            <List component="div" aria-labelledby="nested-list-subheader">
-              {cart.map((product, index) => (
-                <ListItem>
-                  <ListItemText
-                    primary={getProductString(product, products)}
-                    secondary={
-                      product.extras.length > 0 &&
-                      `Adicionais: ${getExtrasString(product.extras, extras)}`
-                    }
-                  />
-                  <ListItemSecondaryAction>
-                    <IconButton
-                      edge="end"
-                      onClick={() => handleRemoveFromCart(index)}
-                    >
-                      <DeleteIcon color="error" />
-                    </IconButton>
-                  </ListItemSecondaryAction>
-                </ListItem>
-              ))}
-            </List>
-          </DialogContent>
-          <StyledDialogActions>
-            <DisabledButton>Total: R${getTotalPrice(cart)}</DisabledButton>
-            <StyledButton
-              variant="outlined"
-              startIcon={<StyledWhatsapp />}
-              onClick={handleCheckoutClick}
-            >
-              Enviar pedido
-            </StyledButton>
-          </StyledDialogActions>
-        </>
+        content
       ) : (
         <DialogContent>
           <p>Adicione lanches ao seu pedido :)</p>
