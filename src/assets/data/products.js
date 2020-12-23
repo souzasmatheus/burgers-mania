@@ -4,7 +4,7 @@ module.exports = [
     id: 0,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.00', cf: '15.50' },
     },
     source: '',
@@ -17,7 +17,7 @@ module.exports = [
     id: 1,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.00', cf: '15.50' },
     },
     source: '',
@@ -29,7 +29,7 @@ module.exports = [
     id: 2,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.00', cf: '15.50' },
     },
     source: '',
@@ -42,7 +42,7 @@ module.exports = [
     id: 3,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.00', cf: '15.50' },
     },
     source: '',
@@ -55,7 +55,7 @@ module.exports = [
     id: 4,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '17.50', cf: '18.00' },
     },
     source: '',
@@ -68,7 +68,7 @@ module.exports = [
     id: 5,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.00', cf: '15.50' },
     },
     source: '',
@@ -81,7 +81,7 @@ module.exports = [
     id: 6,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '15.50', cf: '16.00' },
     },
     source: '',
@@ -93,7 +93,7 @@ module.exports = [
     id: 7,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '10.50', cf: '11.00' },
     },
     source: '',
@@ -105,7 +105,7 @@ module.exports = [
     id: 8,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '17.00', cf: '17.50' },
     },
     source: '',
@@ -118,7 +118,7 @@ module.exports = [
     id: 9,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '17.00', cf: '17.50' },
     },
     source: '',
@@ -131,7 +131,7 @@ module.exports = [
     id: 10,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '19.90', cf: '20.50' },
     },
     source: '',
@@ -144,7 +144,7 @@ module.exports = [
     id: 11,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '22.00', cf: '22.50' },
     },
     source: '',
@@ -157,7 +157,7 @@ module.exports = [
     id: 12,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '16.00', cf: '16.50' },
     },
     source: '',
@@ -170,7 +170,7 @@ module.exports = [
     id: 13,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '22.00', cf: '20.50' },
     },
     source: '',
@@ -183,7 +183,7 @@ module.exports = [
     id: 14,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '26.50', cf: '27.00' },
     },
     source: '',
@@ -196,7 +196,7 @@ module.exports = [
     id: 15,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '18.00', cf: '18.50' },
     },
     source: '',
@@ -209,7 +209,7 @@ module.exports = [
     id: 16,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '19.90', cf: '20.50' },
     },
     source: '',
@@ -222,7 +222,7 @@ module.exports = [
     id: 17,
     type: 'burgers',
     specialCondition: {
-      name: 'Adicionar refrigerante e batata',
+      name: 'Trio (refrigerante e batata)',
       price: { spa: '18.00', cf: '18.50' },
     },
     source: '',
